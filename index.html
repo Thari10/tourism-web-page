@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="app"  class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="homemy.html">HOME</a></li>
+                    <li><a href="Tourist Information.html">Tourist Information</a></li>
+                    <li><a href="Queris.html">Queries</a></li>
+                    <li><a href="index.html">To-Do-List</a></li>
+                    <li><a href="Contact.html">ContactUs</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <h1 style="text-align:center">What you do in Sri lanka</h1>
+        <div id="div1">
+            Timer: {{counter}}
+            <h2>List</h2>
+            <ul>
+                <li v-for="item in items">
+                    {{item.message}}
+                </li>
+            </ul>
+            <button v-on:click='clickEvent()'>Add Vilpatthu</button>
+
+        </div>
+        <div id="form">
+            <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{option.text}}
+                </option>
+            </select>
+            <span>Selected: {{selected}}</span><br></br>
+        </div>
+        <div id="component_test">
+            <testcomponent></testcomponent>
+        </div>
+        <div>
+            <input type="checkbox" id="jack" value="Jack" v-model=" checkedNames ">
+            <label for="jack">Kandy</label>
+            <input type="checkbox" id="john" value="John" v-model=" checkedNames ">
+            <label for="john">Anuradapura</label>
+            <input type="checkbox" id="mike" value="Mike" v-model=" checkedNames ">
+            <label for="mike">Polonnarwa</label>
+            <br>
+            <span>Checked names:{{checkedNames}}</span>
+        </div>
+        <div >
+            <h1> Enter Places You Like to visit</h1>
+            <div style="margin-left: 50px;">
+                
+                <input v-model="message" placeholder="Enter Place">
+                <p>Place is: {{ message }}</p>
+                
+                <input v-model="v1" placeholder="Enter Place">
+                <p>Place is: {{ v1 }}</p>
+                <input v-model="v2" placeholder="Enter Place">
+                <p>Place is: {{ v2 }}</p>
+                <input v-model="v3" placeholder="Enter Place">
+                <p>Place is: {{ v3 }}</p>
+                <input v-model="v4" placeholder="Enter Place">
+                <p>Place is: {{ v4 }}</p>
+                <input v-model="v5" placeholder="Enter Place">
+                <p>Place is: {{ v5 }}</p>
+            </div>
+        </div>
+        <div>
+            <h1>Give Your Feedback about Travelling Sri lanka</h1>
+            <span>Your Comment is:</span>
+            <p style="white-space: pre-line;">{{ v6 }}</p>
+            <br>
+            <textarea v-model="v6" placeholder="add multiple lines"></textarea>
+        </div>
+
+
+        <div id="example-3">
+            <button  v-on:click="say('Submit')">Thank you </button>
+            <button  v-on:click="say('Remove')">Your data Removed</button>
+        </div>
+        <div>
+            <footer class="footer-distributed">
+        
+                <div class="footer-left">
+                    <img src="img/logo12.png">
+                    <h3>About<span>JK Tourism</span></h3>
+        
+                    <p class="footer-links">
+                        <a href="#">Home</a>
+                        |
+                        <a href="#">Tourist Information</a>
+                        |
+                        <a href="#">Queries</a>
+                        |
+                        <a href="#">To-Do-List</a>
+                        |
+                        <a href="#">ContactUs</a>
+                        |
+                        <a href="#">About</a>
+                    </p>
+        
+                    <p class="footer-company-name">© JK Tourism Pvt. Ltd.</p>
+                    <p class="footer-company-name">© Privacy Policy - Terms & Conditions.</p>
+                </div>
+        
+                <div class="footer-center">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>Karaputugala,
+                                Kamburupitiya</span>
+                            <span> Matara - 81100</span>
+                            <span>Tourism Hotline - 1912</span>
+                            Ambulance Service - 1990
+                        </p>
+                    </div>
+        
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+94 114526692</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="Jktourism@gmail.com">Jktourism@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p class="footer-company-about">
+                        <span>About the company</span>
+                        Give Superb Service
+                    </p>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    </div>
+    
+
+    <script src="my_vue.js">
+    </script>
+
+</body>
+
+</html>
